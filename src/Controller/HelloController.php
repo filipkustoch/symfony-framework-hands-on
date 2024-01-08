@@ -46,8 +46,8 @@ class HelloController extends AbstractController
 
   private function getMessageById(int $id): array
   {
-    if (array_key_exists($id - 1, $this->messages)) {
-      return $this->messages[$id - 1];
+    if (array_key_exists($id, $this->messages)) {
+      return $this->messages[$id];
     }
     throw new NotFoundHttpException('Message not found');
   }
